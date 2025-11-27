@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightShop - Акции</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="header1 container1">
+            <a href="index.html" class="logo-text">NightShop</a>
+            <ul class="nav-list">
+                <li class="btn"><a href="index.html">Главная</a></li>
+                <li class="btn"><a href="catalog.html">Каталог</a></li>
+                <li class="btn"><a href="about_us.html">О нас</a></li>
+                <li class="btn"><a href="warranty.html">Гарантия</a></li>
+                <li class="btn-blue"><a href="promotions.html">Акции</a></li>
+                <li class="btn"><a href="social_contacts.html">Соцсети</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Горячие предложения</h2>
+        
+        <div class="promo-item">
+            <div>
+                <span class="promo-badge">Скидка -20%</span>
+                <h2>Набор геймера "Комбо"</h2>
+                <p>Клавиатура KeyMaster + Мышь ClickFast + Коврик в подарок!</p>
+            </div>
+            <div style="text-align: right;">
+                <h3 style="text-decoration: line-through; color: #888;">9 500 ₽</h3>
+                <h2 style="color: #4cd964; font-size: 32px;">7 600 ₽</h2>
+                <button class="buy-btn" onclick="addToCart(7); addToCart(8); alert('Набор добавлен! Коврик положим при выдаче.')">Купить комплект</button>
+            </div>
+        </div>
+
+        <div class="promo-item">
+            <div>
+                <span class="promo-badge">Хит продаж</span>
+                <h2>Ноутбук для учебы ProWork 15</h2>
+                <p>При покупке ноутбука — антивирус на 1 год бесплатно.</p>
+            </div>
+            <div style="text-align: right;">
+                <h2 style="color: #dcaaff; font-size: 32px;">55 000 ₽</h2>
+                <button class="buy-btn" onclick="addToCart(2)">В корзину</button>
+            </div>
+        </div>
+
+        <div class="promo-item" style="border-color: #4a2b7a; background: transparent;">
+            <div>
+                <span class="promo-badge" style="background:#5e3a8a;">Промокод</span>
+                <h2>Скидка 500₽ на первый заказ</h2>
+                <p>Введите промокод <strong>NEWUSER2024</strong> при оформлении заказа.</p>
+            </div>
+            <button class="btn" onclick="navigator.clipboard.writeText('NEWUSER2024'); alert('Промокод скопирован!')">Копировать код</button>
+        </div>
+    </div>
+    
+    <!-- Необходимые элементы для работы JS (корзина) -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header"><h2>Ваша корзина</h2><span class="close-cart" onclick="closeCart()">&times;</span></div>
+            <div id="cartItems" class="cart-items-list"></div>
+            <div style="border-top: 1px solid #4a2b7a; padding-top: 15px;">
+                <p class="cart-total">Итого: <span id="cartTotal">0 ₽</span></p>
+                <button class="checkout-btn" onclick="showCheckoutForm()">Оформить заказ</button>
+            </div>
+            <div id="orderForm" class="order-form">
+                <h3>Данные получателя</h3>
+                <div class="form-group"><input type="text" id="orderName" placeholder="Ваше Имя"></div>
+                <div class="form-group"><input type="tel" id="orderPhone" placeholder="Ваш Телефон"></div>
+                <button class="buy-btn" onclick="submitOrder()">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Кнопка корзины (скрытая, нужна для обновления счетчика JS, можно стилизовать или скрыть display:none) -->
+    <button id="cart-btn" style="display:none;"></button>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Интернет-магазин "NightShop" © 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+Html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightShop - Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="header1 container1">
+            <a href="index.html" class="logo-text">NightShop</a>
+            <ul class="nav-list">
+                <li class="btn"><a href="index.html">Главная</a></li>
+                <li class="btn"><a href="catalog.html">Каталог</a></li>
+                <li class="btn"><a href="about_us.html">О нас</a></li>
+                <li class="btn"><a href="warranty.html">Гарантия</a></li>
+                <li class="btn"><a href="promotions.html">Акции</a></li>
+                <li class="btn-blue"><a href="social_contacts.html">Соцсети</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Мы на связи</h2>
+        
+        <div class="contacts-grid">
+            <!-- Соцсети -->
+            <div class="contact-card">
+                <h3>Наши социальные сети</h3>
+                <p style="margin: 20px 0; color: #ccc;">Подписывайтесь, чтобы узнавать об акциях первыми!</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" title="Telegram">✈️</a>
+                    <a href="#" target="_blank" title="VK">🔵</a>
+                    <a href="#" target="_blank" title="YouTube">🔴</a>
+                    <a href="#" target="_blank" title="Discord">👾</a>
+                </div>
+                <div style="margin-top: 30px;">
+                    <p>E-mail: support@NightShop.ru</p>
+                    <p>Тел: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="order-form" style="display: flex; margin-top: 0; height: 100%;">
+                <h3>Напишите нам</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Ваш Email">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Ваше сообщение..." style="width: 100%; padding: 12px; border-radius: 8px; background: #2d1b4e; border: 1px solid #4a2b7a; color: white; min-height: 100px; outline: none;"></textarea>
+                </div>
+                <button class="buy-btn" onclick="alert('Сообщение отправлено! Мы ответим на почту.')">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Интернет-магазин "NightShop" © 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

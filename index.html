@@ -1,0 +1,105 @@
+    
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightShop - Главная</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Подключение шрифта Island Moments -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+
+    <!-- Стили для текстового логотипа -->
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="header1 container1">
+            <!-- Текстовый логотип вместо картинки -->
+            <a href="index.html" class="logo-text">NightShop</a>
+
+            <ul class="nav-list">
+                <li class="btn-blue"><a href="index.html">Главная</a></li>
+                <li class="btn"><a href="catalog.html">Каталог</a></li>
+                <li class="btn"><a href="about_us.html">О нас</a></li>
+                <li class="btn"><a href="warranty.html">Гарантия</a></li>
+                <li class="btn"><a href="promotions.html">Акции</a></li>
+                <li class="btn"><a href="social_contacts.html">Соцсети</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-banner">
+            Место для рекламы
+        </div>
+
+        <div class="tools-panel">
+            <input type="text" id="search-input" class="search-input" placeholder="Поиск по сайту...">
+            <div class="user-actions">
+                <button class="action-btn">Сравнение</button>
+                <button class="action-btn" id="fav-btn">Избранное (0)</button>
+                <button class="action-btn" id="cart-btn" onclick="openCart()">Корзина (0)</button>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <main class="products-area">
+                <h2 class="section-title">Хиты продаж</h2>
+                <div class="products-grid" id="products-container">
+                    <!-- Заполняется JS -->
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="catalog.html" class="buy-btn" style="display:inline-block; width: auto; padding: 10px 40px; text-decoration: none;">Перейти в каталог</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Интернет-магазин "NightShop" © 2024</p>
+            <p>Автор сайта: <strong>Руслан</strong></p>
+            <p>Группа: <strong>ИС-222/24</strong></p>   
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Ваша корзина</h2>
+                <span class="close-cart" onclick="closeCart()">&times;</span>
+            </div>
+            
+            <div id="cartItems" class="cart-items-list"></div>
+            
+            <div style="border-top: 1px solid #4a2b7a; padding-top: 15px;">
+                <p class="cart-total">Итого: <span id="cartTotal">0 ₽</span></p>
+                <button class="checkout-btn" onclick="showCheckoutForm()">Оформить заказ</button>
+            </div>
+
+            <div id="orderForm" class="order-form">
+                <h3>Данные получателя</h3>
+                <div class="form-group">
+                    <input type="text" id="orderName" placeholder="Ваше Имя">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="orderPhone" placeholder="Ваш Телефон">
+                </div>
+                <button class="buy-btn" onclick="submitOrder()">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+  
